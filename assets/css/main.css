@@ -1,0 +1,68 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+	/*background-image: url(https://i.pinimg.com/originals/b3/cf/82/b3cf8221bf35baf3d4faa68473811fc9.jpg);*/
+    
+}
+
+.form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	/*background-color: rgba(120,120,220,.5);*/
+	background-size: cover;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.inpAuth {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0,0,0,0);
+	border: none;
+	border-bottom: 1px solid black;
+	font-size: 30px;
+	color: black;
+}
+.inpAuth::placeholder {
+	color: gray;
+	text-shadow: 1px 1px 10px white;
+}
+.inpAuthPass {
+	margin-top: 20px;
+}
+.pAuth {
+	text-align: center;
+}
+
+.msgAlert {
+	background-color: rgba(10,220,210, .9);
+	padding: 10px 40px;
+	border-radius: 10px;
+	position: fixed;
+	bottom: 120px;
+	color: white;
+}
+
+@media (max-width: 500px) {
+	.inpAuth {
+		font-size: 16px!important;
+	}
+	.pAuth {
+		font-size: 14px!important;
+	}
+	.btn {
+		font-size: 14px!important;
+	}
+	.msgAlert {
+		bottom: 0px;
+		font-size: 16px!important;
+		padding: 10px 20px;
+
+	}
+
+}

@@ -1,0 +1,227 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	text-decoration: none;
+	overflow: hidden;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0,0,0,.9);
+}
+.gameParent {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 90%;
+	background-color: 
+}
+.game {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	width: 100%;
+	height: 250px;
+	padding: 20px 0px;
+	border: none;
+	box-shadow: 0px 0px 10px gray;
+	margin-bottom: 60px;
+	background-color: rgba(0,0,0,.01);
+}
+.imgChoiseParent {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: row;
+	width: 100%;
+    background-size: cover;
+}
+.imgChoise {
+	width: 150px;
+	border: none;
+	box-shadow: 0px 0px 30px white;
+	padding: 20px;
+	cursor: pointer;
+	transition: .1s;
+}
+.imgChoise:hover {
+	box-shadow: 0px 0px 50px lightgreen;
+	background: radial-gradient(circle, rgba(93,212,246,1) 0%, rgba(160,245,128,1) 100%);
+	cursor: pointer;
+	transform: scale(1.2);
+}
+.imgChoise:active {
+	box-shadow: 0px 0px 20px red;
+	background-color: lightgreen;
+	cursor: pointer;
+	transform: scale(0.95);
+}
+.left {
+	width: 200px;
+	height: 200px;
+	box-shadow: 0px 0px 30px white;
+	margin: 40px;
+	background-color: rgba(255,255,255,.3);
+}
+.right {
+	width: 200px;
+	height: 200px;
+	box-shadow: 0px 0px 30px white;
+	margin: 40px;
+	background-color: rgba(255,255,255,.3);	
+}
+
+.imgLeft {
+	animation: imgLeftAnim .4s ease;
+}
+.imgRight {
+	animation: imgLeftAnim .4s ease;
+}
+
+@keyframes imgLeftAnim {
+	0% {
+		opacity: 0;
+		transform: scale(2);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.timer {
+	color: white;
+}
+.btnRestast {
+	position: absolute;
+	padding: 40px 20px;
+	font-size: 50px;
+	cursor: pointer;
+	animation: btnRestastAnim .4s ease;
+
+}
+@keyframes btnRestastAnim {
+	0% {
+		opacity: 0;
+		transform: scale(.5);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.modalBack {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: radial-gradient(circle, rgba(227,40,207,.7) 0%, rgba(29,0,255,.7) 100%);
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	animation: modalBackAnim .5s ease;
+	z-index: 99;
+	width: 100%;
+	height: 100vh;
+}
+.modal {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	width: 600px;
+	height: 300px;
+	position: relative;
+	animation: modalAnim 1s ease;
+	border-radius: 20px;
+	background: radial-gradient(circle, rgba(29,0,255,.9) 0%, rgba(227,40,207,.9) 100%);
+}
+.modalTxt {
+	animation: modalAnim 1.5s ease;
+	color: white;
+	font-size: 60px;
+}
+.modalBtn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 20px;
+	font-size: 40px;
+	cursor: pointer;
+	animation: modalAnim 1.2s ease;
+	transition: .2s;
+	background: radial-gradient(circle, rgba(227,40,207,.7) 0%, rgba(29,0,255,.7) 100%);
+	border-radius: 10px;
+	color: white;
+	border: none;
+}
+.modalBtn:hover {
+	box-shadow: 0px 0px 50px lightgreen;
+	background: radial-gradient(circle, rgba(29,0,255,1) 0%, rgba(227,40,207,1) 100%);
+	cursor: pointer;
+	transform: scale(1.2);
+}
+.modalBtn:active {
+	box-shadow: 0px 0px 20px red;
+	background-color: lightgreen;
+	cursor: pointer;
+	transform: scale(0.95);
+}
+
+@keyframes modalBackAnim {
+	0% {
+		opacity: 0;
+
+	}
+	100% {
+		opacity: 1;
+
+	}
+}
+
+@keyframes modalAnim {
+	0% {
+		filter: blur(50px);
+		opacity: 0;
+		transform: scale(.5);
+
+	}
+	100% {
+		filter: blur(0px);
+		opacity: 1;
+		transform: scale(1);
+
+	}
+}
+video {
+	position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+	z-index: -2;
+}
+.videoBack {
+	position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: rgba(0,0,0,.4);
+	z-index: -1;
+}
+
+.count, .countH3 {
+	color: white;
+	font-size: 40px;
+}
